@@ -1,0 +1,18 @@
+import random
+
+word_bank = [
+    "love", "pain", "dreams", "night", "rise", "fall",
+    "heart", "fire", "alone", "again", "lost","sad", "found"
+]
+
+def generate_lyrics(lines=4):
+    lyrics = []
+    for _ in range(lines):
+        line = " ".join(random.sample(word_bank, 4))
+        lyrics.append(line)
+    return lyrics
+
+if __name__ == "__main__":
+    print("Generated Lyrics:")
+    for line in generate_lyrics():
+        print(line)
